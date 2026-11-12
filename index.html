@@ -141,36 +141,20 @@ footer{padding-block:28px;font-size:14px;color:var(--nota)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
 
 
-/* palette spettacolo: cinema */
-.cinema{background:#110A14;color:var(--crema)}
-.cinema .eyebrow{color:var(--fucsia)}
-.cinema em{color:#F7C548}
-.cinema .muted{color:#D9CFDD}
-.spot{background:radial-gradient(ellipse 70% 55% at 50% 0%,rgba(247,197,72,.13),transparent 70%),#110A14}
-.cinema .quattro div{background:#1F1424;border:1px solid #3A2440}
-.cinema .quattro p{color:#D9CFDD}
-.cinema .storia{background:#1F1424;border:1px solid #3A2440}
-.cinema .formato{border-color:#3A2440}
-.cinema .formato .eyebrow{color:#F7C548}
-.cinema .scheda{background:#1F1424}
-.cinema .scheda .eyebrow{color:var(--fucsia)}
-.cinema .video{border-color:#F7C548}
-.icona{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 45%,rgba(247,197,72,.16),transparent 62%)}
+/* palette sezioni: verde scuro, verde acido, arancione, viola */
+:root{--verde-scuro:#1E3A2A; --arancio:#F28C28; --arancio-scuro:#B85A00}
+.icona{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:#3E2660}
 .icona svg{width:88px;height:88px}
-/* palette workshop: bosco */
-.carta{background:#F1EEE2;color:#1E2B20}
-.carta .eyebrow{color:#2F6B3F}
-.carta .muted{color:#3E5144}
-.carta .sottotitolo{color:#2F6B3F}
-.bosco{background:#1E3A2A;color:#F3EFE2}
-.bosco .eyebrow{color:#BFD8A6}
-.bosco em{color:#D7EBA8}
-.bosco .muted{color:#D5E3CC}
-.bosco .passo{background:#29492F}
-.bosco .box{border-color:#4F6F58}
-.bosco .box .eyebrow{color:#D7EBA8}
-.illus{background:#DCE8D2}
-
+.verde{background:var(--verde-scuro);color:var(--crema)}
+.verde .eyebrow{color:var(--arancio)}
+.verde em{color:var(--lime)}
+.verde .muted{color:#D5E3CC}
+.verde .passo{background:#29492F}
+.verde .box{border-color:#4F6F58}
+.verde .box .eyebrow{color:var(--lime)}
+.ws .eyebrow{color:var(--verde-scuro)}
+.ws .sottotitolo{color:var(--verde-scuro)}
+.ws .muted{color:#3E5144}
 @media (max-width: 700px){
   section{padding-block:72px}
   .hero .rami{display:none}
@@ -230,7 +214,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
 </div>
 
 <!-- SPETTACOLO -->
-<section id="spettacolo" class="cinema spot">
+<section id="spettacolo" class="chiaro">
   <div class="wrap row" style="align-items:stretch">
     <div class="col-testo">
       <p class="eyebrow">Proposta 01 · Lo spettacolo</p>
@@ -238,10 +222,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
       <p class="muted">Lo show comico e interattivo che trasforma il tuo evento: il pubblico ride, partecipa e se ne va con uno sguardo nuovo sulla natura. E su di sé.</p>
       <p class="muted">Le piante abitano questo pianeta da più di 400 milioni di anni e hanno trovato soluzioni geniali per sopravvivere, adattarsi e cambiare. Sul palco le loro storie più incredibili, tutte vere e basate su studi scientifici, diventano lezioni di vita.</p>
       <div class="quattro">
-        <div><h3 style="color:#F7C548">Ridi.</h3><p>Storie vere così assurde che sembrano inventate.</p></div>
-        <div><h3 style="color:var(--fucsia)">Partecipa.</h3><p>Domande e sfide di curiosità coinvolgono la sala.</p></div>
-        <div><h3 style="color:#F7C548">Scopri.</h3><p>Ogni curiosità nasce da studi scientifici veri.</p></div>
-        <div><h3 style="color:var(--fucsia)">Cambia sguardo.</h3><p>Ogni pianta lascia una lezione da portare a casa.</p></div>
+        <div><h3 style="color:var(--viola3)">Ridi.</h3><p>Storie vere così assurde che sembrano inventate.</p></div>
+        <div><h3 style="color:var(--arancio-scuro)">Partecipa.</h3><p>Domande e sfide di curiosità coinvolgono la sala.</p></div>
+        <div><h3 style="color:var(--viola3)">Scopri.</h3><p>Ogni curiosità nasce da studi scientifici veri.</p></div>
+        <div><h3 style="color:var(--arancio-scuro)">Cambia sguardo.</h3><p>Ogni pianta lascia una lezione da portare a casa.</p></div>
       </div>
     </div>
     <div class="col-foto">
@@ -253,22 +237,22 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
 </section>
 
 <!-- STORIE E FORMATI -->
-<section class="cinema" style="border-top:1px solid #2A1A30">
+<section>
   <div class="wrap">
-    <p class="eyebrow">Proposta 01 · Lo spettacolo</p>
+    <p class="eyebrow" style="color:var(--arancio)">Proposta 01 · Lo spettacolo</p>
     <h2>Alcune storie che porto <em>sul palco</em></h2>
     <div class="storie">
-      <article class="storia"><div class="icona"><svg viewBox="0 0 64 64" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 58V14" stroke="#F7C548"/><path d="M32 22c-6-1-10-4-12-8M32 22c6-1 10-4 12-8" stroke="#F7C548"/><path d="M32 32c-6-1-10-4-12-8M32 32c6-1 10-4 12-8" stroke="#F7C548"/><path d="M32 42c-6-1-10-4-12-8M32 42c6-1 10-4 12-8" stroke="#F7C548"/><path d="M32 52c-6-1-10-4-12-8M32 52c6-1 10-4 12-8" stroke="#F7C548"/><path d="M32 6l1.5 3.5L37 11l-3.5 1.5L32 16l-1.5-3.5L27 11l3.5-1.5z" stroke="#FF5AA8"/></svg></div><h3>Le piante imparano e ricordano</h3></article>
-      <article class="storia"><div class="icona"><svg viewBox="0 0 64 64" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="26" r="11" fill="#110A14" stroke="#F7C548"/><path d="M47.0 26.0L52.0 26.0" stroke="#F7C548"/><path d="M42.6 36.6L46.1 40.1" stroke="#F7C548"/><path d="M32.0 41.0L32.0 46.0" stroke="#F7C548"/><path d="M21.4 36.6L17.9 40.2" stroke="#F7C548"/><path d="M17.0 26.0L12.0 26.0" stroke="#F7C548"/><path d="M21.4 15.4L17.8 11.9" stroke="#F7C548"/><path d="M32.0 11.0L32.0 6.0" stroke="#F7C548"/><path d="M42.6 15.4L46.1 11.8" stroke="#F7C548"/><path d="M14 58l6-10 6 10M38 58l6-12 6 12M8 58h48" stroke="#FF5AA8"/></svg></div><h3>Gli alberi prevedono le eclissi</h3></article>
-      <article class="storia"><div class="icona"><svg viewBox="0 0 64 64" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 44c-5-4-8-9-8-15a16 16 0 0 1 32 0c0 6-3 11-8 15v6H24z" stroke="#F7C548"/><path d="M26 56h12" stroke="#F7C548"/><path d="M32 42V28M32 34c-4 0-7-3-7-7 4 0 7 3 7 7zM32 30c4 0 7-3 7-7-4 0-7 3-7 7z" stroke="#FF5AA8"/></svg></div><h3>Se le pensano tutte</h3></article>
-      <article class="storia"><div class="icona"><svg viewBox="0 0 64 64" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h28M18 58h28M21 8c0 12 11 15 11 25S21 46 21 58M43 8c0 12-11 15-11 25s11 13 11 25" stroke="#F7C548"/><path d="M32 52v-8M32 46c-4 0-6-3-6-6 4 0 6 3 6 6zM32 44c3 0 6-2 6-6-4 0-6 2-6 6z" stroke="#FF5AA8"/></svg></div><h3>Il seme che ha sfidato il tempo</h3></article>
-      <article class="storia"><div class="icona"><svg viewBox="0 0 64 64" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 58V34M32 44l-8-7M32 40l9-8M32 50l7-5" stroke="#FF5AA8"/><path d="M32 30c-3 3-10 3-13-1s-2-10 2-12c0-5 5-9 10-7 3-3 9-2 10 2 5 0 8 5 6 9 3 3 2 9-3 10-2 3-8 3-12-1z" stroke="#F7C548"/></svg></div><h3>Il tuo cervello vede se stesso in natura</h3></article>
+      <article class="storia"><div class="icona"><svg viewBox="0 0 64 64" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 58V14" stroke="#C8F53A"/><path d="M32 22c-6-1-10-4-12-8M32 22c6-1 10-4 12-8" stroke="#C8F53A"/><path d="M32 32c-6-1-10-4-12-8M32 32c6-1 10-4 12-8" stroke="#C8F53A"/><path d="M32 42c-6-1-10-4-12-8M32 42c6-1 10-4 12-8" stroke="#C8F53A"/><path d="M32 52c-6-1-10-4-12-8M32 52c6-1 10-4 12-8" stroke="#C8F53A"/><path d="M32 6l1.5 3.5L37 11l-3.5 1.5L32 16l-1.5-3.5L27 11l3.5-1.5z" stroke="#F28C28"/></svg></div><h3>Le piante imparano e ricordano</h3></article>
+      <article class="storia"><div class="icona"><svg viewBox="0 0 64 64" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="26" r="11" fill="#3E2660" stroke="#C8F53A"/><path d="M47.0 26.0L52.0 26.0" stroke="#C8F53A"/><path d="M42.6 36.6L46.1 40.1" stroke="#C8F53A"/><path d="M32.0 41.0L32.0 46.0" stroke="#C8F53A"/><path d="M21.4 36.6L17.9 40.2" stroke="#C8F53A"/><path d="M17.0 26.0L12.0 26.0" stroke="#C8F53A"/><path d="M21.4 15.4L17.8 11.9" stroke="#C8F53A"/><path d="M32.0 11.0L32.0 6.0" stroke="#C8F53A"/><path d="M42.6 15.4L46.1 11.8" stroke="#C8F53A"/><path d="M14 58l6-10 6 10M38 58l6-12 6 12M8 58h48" stroke="#F28C28"/></svg></div><h3>Gli alberi prevedono le eclissi</h3></article>
+      <article class="storia"><div class="icona"><svg viewBox="0 0 64 64" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 44c-5-4-8-9-8-15a16 16 0 0 1 32 0c0 6-3 11-8 15v6H24z" stroke="#C8F53A"/><path d="M26 56h12" stroke="#C8F53A"/><path d="M32 42V28M32 34c-4 0-7-3-7-7 4 0 7 3 7 7zM32 30c4 0 7-3 7-7-4 0-7 3-7 7z" stroke="#F28C28"/></svg></div><h3>Se le pensano tutte</h3></article>
+      <article class="storia"><div class="icona"><svg viewBox="0 0 64 64" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h28M18 58h28M21 8c0 12 11 15 11 25S21 46 21 58M43 8c0 12-11 15-11 25s11 13 11 25" stroke="#C8F53A"/><path d="M32 52v-8M32 46c-4 0-6-3-6-6 4 0 6 3 6 6zM32 44c3 0 6-2 6-6-4 0-6 2-6 6z" stroke="#F28C28"/></svg></div><h3>Il seme che ha sfidato il tempo</h3></article>
+      <article class="storia"><div class="icona"><svg viewBox="0 0 64 64" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 58V34M32 44l-8-7M32 40l9-8M32 50l7-5" stroke="#F28C28"/><path d="M32 30c-3 3-10 3-13-1s-2-10 2-12c0-5 5-9 10-7 3-3 9-2 10 2 5 0 8 5 6 9 3 3 2 9-3 10-2 3-8 3-12-1z" stroke="#C8F53A"/></svg></div><h3>Il tuo cervello vede se stesso in natura</h3></article>
     </div>
     <div class="formati">
       <div class="formato"><p class="eyebrow">45 minuti</p><h3>Lo show completo</h3><p class="muted">L’esperienza intera, per serate, rassegne, teatri e convegni.</p></div>
       <div class="formato"><p class="eyebrow">15-20 minuti</p><h3>Il format breve</h3><p class="muted">Perfetto dentro festival, fiere e programmi con più ospiti.</p></div>
       <div class="formato"><p class="eyebrow">Su misura</p><h3>Sul tema del tuo evento</h3><p class="muted">Sostenibilità, benessere, biodiversità, comunità.</p></div>
-      <div class="formato scheda"><p class="eyebrow">Scheda tecnica</p><p>Serve solo un microfono (proiettore se disponibile). Teatri, palchi all’aperto, orti botanici, fiere, sale conferenze. Montaggio 20-30 minuti.</p></div>
+      <div class="formato scheda"><p class="eyebrow" style="color:var(--arancio)">Scheda tecnica</p><p>Serve solo un microfono (proiettore se disponibile). Teatri, palchi all’aperto, orti botanici, fiere, sale conferenze. Montaggio 20-30 minuti.</p></div>
     </div>
     <div class="video">
       <video src="video-vs.mp4" poster="poster-vs.jpg" controls playsinline preload="metadata" aria-label="Video dimostrativo dello spettacolo"></video>
@@ -277,50 +261,37 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
 </section>
 
 <!-- WORKSHOP -->
-<section id="workshop" class="carta">
+<section id="workshop" class="chiaro ws">
   <div class="wrap row" style="align-items:flex-start">
-    <div class="ws-foto"><div class="foto" style="background:#DCE8D2"><img src="workshop-argema.jpg" alt="Argema durante un workshop all’aperto, tra gli alberi" style="object-position:50% 40%"></div></div>
+    <div class="ws-foto"><div class="foto"><img src="workshop-bosco.jpg" alt="Un gruppo cammina lungo un sentiero nel bosco" style="object-position:50% 60%"></div></div>
     <div class="ws-testo">
       <p class="eyebrow">Proposta 02 · Il workshop</p>
       <h2>Il linguaggio verde</h2>
       <p class="sottotitolo">Workshop di comunicazione con il mondo vegetale</p>
       <p class="muted">Un’ora dinamica, in movimento e all’aperto, per entrare in connessione con le piante: capire come comunicano, come possiamo ascoltarle e cosa possono insegnarci esseri che vivono con logiche completamente diverse dalle nostre.</p>
       <div class="obiettivi">
-        <div><span style="color:#2F6B3F">01</span><p><strong>Imparare a comunicare con le piante</strong>, con attenzione, sensi e presenza.</p></div>
-        <div><span style="color:#7A9A3A">02</span><p><strong>Scoprire come loro comunicano con noi</strong> e come possiamo imparare da loro.</p></div>
-        <div><span style="color:#2F6B3F">03</span><p><strong>Ricevere lezioni di vita per il presente</strong> da esseri con logiche diverse dalle nostre.</p></div>
-        <div><span style="color:#7A9A3A">04</span><p><strong>Vivere un’esperienza in movimento all’aperto</strong>, in connessione diretta con le piante.</p></div>
+        <div><span style="color:var(--verde-scuro)">01</span><p><strong>Imparare a comunicare con le piante</strong>, con attenzione, sensi e presenza.</p></div>
+        <div><span style="color:var(--arancio-scuro)">02</span><p><strong>Scoprire come loro comunicano con noi</strong> e come possiamo imparare da loro.</p></div>
+        <div><span style="color:var(--verde-scuro)">03</span><p><strong>Ricevere lezioni di vita per il presente</strong> da esseri con logiche diverse dalle nostre.</p></div>
+        <div><span style="color:var(--arancio-scuro)">04</span><p><strong>Vivere un’esperienza in movimento all’aperto</strong>, in connessione diretta con le piante.</p></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- UN'ORA TRA LE PIANTE -->
-<section class="bosco">
+<section class="verde">
   <div class="wrap">
     <p class="eyebrow">Proposta 02 · Il workshop</p>
     <h2 style="margin-bottom:32px">Un’ora <em>tra le piante</em></h2>
     <div class="row" style="align-items:flex-start">
       <div class="passi">
-        <div class="passo"><span class="n" style="color:#D7EBA8">1</span><p><strong>Rallentare e prepararsi.</strong> <span class="muted">Si entra nel tempo delle piante: respiro, sensi, attenzione.</span></p></div>
-        <div class="passo"><span class="n" style="color:#A8C69F">2</span><p><strong>Come si comunica con le piante e come loro comunicano con noi.</strong> <span class="muted">Esercizi di comunicazione attraverso esperienze sensoriali guidate, in movimento tra le piante.</span></p></div>
-        <div class="passo"><span class="n" style="color:#D7EBA8">3</span><p><strong>Lezioni per il presente.</strong> <span class="muted">Cosa portiamo a casa da esseri con logiche diverse dalle nostre. Condivisione finale.</span></p></div>
+        <div class="passo"><span class="n" style="color:var(--lime)">1</span><p><strong>Rallentare e prepararsi.</strong> <span class="muted">Si entra nel tempo delle piante: respiro, sensi, attenzione.</span></p></div>
+        <div class="passo"><span class="n" style="color:var(--arancio)">2</span><p><strong>Come si comunica con le piante e come loro comunicano con noi.</strong> <span class="muted">Esercizi di comunicazione attraverso esperienze sensoriali guidate, in movimento tra le piante.</span></p></div>
+        <div class="passo"><span class="n" style="color:var(--lime)">3</span><p><strong>Lezioni per il presente.</strong> <span class="muted">Cosa portiamo a casa da esseri con logiche diverse dalle nostre. Condivisione finale.</span></p></div>
       </div>
       <div class="ws-lato">
-        <div class="tondo illus" role="img" aria-label="Illustrazione di una persona che abbraccia un albero"><svg viewBox="0 0 200 200" width="100%" height="100%" aria-hidden="true">
-<ellipse cx="104" cy="186" rx="80" ry="10" fill="#A8C69F"/>
-<circle cx="78" cy="62" r="34" fill="#4E8A55"/><circle cx="128" cy="48" r="40" fill="#2F6B3F"/><circle cx="160" cy="78" r="28" fill="#3E7A48"/><circle cx="104" cy="84" r="26" fill="#5E9A5E"/>
-<path d="M118 84c-4 30-2 70-6 102h24c-4-32-2-72-6-102z" fill="#6B4A2F"/>
-<path d="M124 120c-2 8 0 16 2 22M118 150c1 8 3 14 2 22" stroke="#8A6542" stroke-width="2" fill="none" stroke-linecap="round"/>
-<path d="M86 184l2-34M98 184l3-34" stroke="#5B7FA6" stroke-width="8" stroke-linecap="round"/>
-<path d="M80 112c4-6 16-8 24-4l4 44c-8 4-20 4-28 0z" fill="#B7C93A"/>
-<circle cx="94" cy="98" r="10" fill="#E3B595"/>
-<path d="M84 96c0-10 6-14 12-14 7 0 11 6 10 12-4-3-10-4-14-2-3 1-5 5-8 4z" fill="#3B2A22"/>
-<path d="M84 98c-2 8 0 16 4 20" stroke="#3B2A22" stroke-width="5" stroke-linecap="round" fill="none"/>
-<path d="M100 118c10-2 18 0 22 4" stroke="#E3B595" stroke-width="6" stroke-linecap="round" fill="none"/>
-<path d="M98 132c10-2 19 0 24 5" stroke="#E3B595" stroke-width="6" stroke-linecap="round" fill="none"/>
-<path d="M42 30l2 4 4 2-4 2-2 4-2-4-4-2 4-2zM170 32l1.5 3 3 1.5-3 1.5-1.5 3-1.5-3-3-1.5 3-1.5z" fill="#F3EFE2"/>
-</svg></div>
+        <div class="tondo"><img src="workshop-mano.jpg" alt="Una mano che sfiora le foglie di una pianta" style="transform:none"></div>
         <div class="box">
           <p class="eyebrow" style="color:var(--lime);font-size:13px">Scheda del workshop</p>
           <p style="font-size:15px;line-height:1.7"><strong>Durata:</strong> 1 ora<br><strong>Dove:</strong> all’aperto, parchi, giardini, orti botanici<br><strong>Formato:</strong> dinamico, in movimento<br><strong>Partecipanti:</strong> numero da concordare</p>

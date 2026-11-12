@@ -3,238 +3,342 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Verde Stellare – Lo spettacolo di Argema</title>
-<meta name="description" content="Lo show comico e interattivo sulle piante per festival, associazioni ed eventi su natura e sostenibilità. Di e con Argema, agronoma.">
+<title>Verde Stellare – Spettacolo e workshop di Argema</title>
+<meta name="description" content="Due proposte per festival, associazioni ed eventi su natura e sostenibilità: lo spettacolo comico e interattivo sulle piante e il workshop di comunicazione con il mondo vegetale. Di e con Argema, agronoma.">
 <meta property="og:title" content="Verde Stellare – Come e perché la vita delle piante parla anche di te">
-<meta property="og:description" content="Lo show comico e interattivo che trasforma il tuo evento in un'esperienza.">
+<meta property="og:description" content="Spettacolo comico e interattivo e workshop di comunicazione con il mondo vegetale, per il tuo evento.">
 <meta property="og:image" content="https://bmeluzzi01-lab.github.io/verdestellare/argema-nicchia.jpg">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#2D1A47">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400;1,9..144,600&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400;1,9..144,600&amp;family=DM+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
 <style>
+:root{
+  --viola:#2D1A47; --viola2:#3E2660; --viola3:#6A2BD9; --bordo:#8F4BFF; --linea:#5A4378;
+  --lime:#C8F53A; --fucsia:#FF5AA8; --fucsia-scuro:#C2187A;
+  --crema:#F6F0E4; --lilla:#E3D8EE; --nota:#B9A9CC; --scuro:#1C0F2B; --grigio:#4A3463;
+  --serif:"Fraunces", Georgia, serif; --sans:"DM Sans", Arial, sans-serif;
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#2D1A47;color:#F6F0E4}
-a{color:#C8F53A}a:hover{color:#E4FF8A}
-a:focus-visible{outline:3px solid #FF5AA8;outline-offset:3px}
-img{max-width:100%}
+body{margin:0;background:var(--viola);color:var(--crema);font-family:var(--sans);font-size:17px;line-height:1.55}
+img{max-width:100%;display:block}
+a{color:var(--lime)}
+a:focus-visible{outline:3px solid var(--fucsia);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);margin:0;line-height:1.04;text-wrap:balance}
+h1{font-size:clamp(40px,6.4vw,76px);font-weight:800;letter-spacing:-.01em}
+h2{font-size:clamp(32px,4.4vw,52px);font-weight:800}
+h3{font-size:21px;font-weight:600}
+p{margin:0}
+em{font-style:italic;font-weight:600;color:var(--lime)}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+section{padding-block:96px}
+.eyebrow{font-size:14px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--fucsia);margin-bottom:14px}
+.muted{color:var(--lilla)}
+.chiaro{background:var(--crema);color:var(--scuro)}
+.chiaro .eyebrow{color:var(--viola3)}
+.chiaro em{color:var(--viola3)}
+.chiaro .muted{color:var(--grigio)}
+.row{display:flex;flex-wrap:wrap;gap:48px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none}
+.btn-lime{background:var(--lime);color:var(--scuro)}
+.btn-outline{border:2px solid var(--fucsia);color:var(--fucsia)}
+.btn-dark{background:var(--viola);color:var(--lime)}
+.btn-viola{background:var(--viola3);color:#fff}
+.btn-dark-outline{border:2px solid var(--viola);color:var(--viola)}
+.arch{border-radius:999px 999px 24px 24px;overflow:hidden;border:2px solid var(--bordo);background:#000;aspect-ratio:4/5;width:100%;max-width:400px}
+.arch img{width:100%;height:100%;object-fit:cover}
+.foto{border-radius:22px;overflow:hidden}
+.foto img{width:100%;height:100%;object-fit:cover}
+
+/* header */
+header{position:relative;z-index:2}
+.top{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between;padding-block:24px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:22px;font-weight:600;color:var(--crema);text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center;font-size:15px}
+nav a{color:var(--crema);text-decoration:none}
+nav a:hover{color:var(--lime)}
+nav .wa{color:var(--lime);font-weight:700}
+
+/* hero */
+.hero{position:relative;padding-block:40px 96px;overflow:hidden}
+.hero .rami{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;opacity:.85;-webkit-mask-image:linear-gradient(90deg,transparent 0 22%,#000 34%);mask-image:linear-gradient(90deg,transparent 0 22%,#000 34%)}
+.hero .row{position:relative}
+.hero-testo{flex:999 1 520px;min-width:0;display:flex;flex-direction:column;gap:24px}
+.hero-foto{flex:1 1 300px;min-width:0;display:flex;justify-content:center;position:relative}
+.sticker{position:absolute;left:0;bottom:44px;background:var(--fucsia);color:var(--scuro);font-weight:800;font-size:16px;padding:11px 22px;border-radius:999px;transform:rotate(-6deg);white-space:nowrap}
+.pills{display:flex;flex-wrap:wrap;gap:14px}
+
+/* ospite */
+.ospite{border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);padding-block:36px}
+.ospite .wrap{display:flex;flex-wrap:wrap;gap:20px 44px;align-items:center}
+.loghi{display:flex;flex-wrap:wrap;gap:24px 40px;align-items:center}
+
+/* spettacolo */
+.col-testo{flex:999 1 460px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.col-foto{flex:1 1 360px;min-width:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.col-foto .alta{grid-row:span 2}
+.col-foto .foto{min-height:200px}
+.quattro{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:8px}
+.quattro div{background:#fff;border-radius:20px;padding:16px 20px}
+.quattro p{font-size:15px;line-height:1.45;margin-top:4px}
+
+/* storie */
+.storie{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin-top:36px}
+.storia{background:var(--viola2);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.storia img{aspect-ratio:4/3;width:100%;object-fit:cover}
+.storia h3{font-size:18px;padding:16px 18px 18px}
+.formati{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:40px}
+.formato{border:1.5px solid var(--linea);border-radius:22px;padding:22px 24px;display:flex;flex-direction:column;gap:8px}
+.formato .eyebrow{color:var(--lime);margin:0;font-size:13px}
+.formato p{font-size:15px}
+.scheda{background:var(--viola2);border:0}
+.scheda .eyebrow{color:var(--fucsia)}
+.video{margin-top:56px;aspect-ratio:16/9;border-radius:24px;overflow:hidden;border:2px solid var(--bordo);background:#000;max-width:100%}
+.video video{width:100%;height:100%;object-fit:contain;display:block}
+
+/* workshop */
+.ws-foto{flex:1 1 320px;min-width:0;max-width:400px}
+.ws-foto .foto{aspect-ratio:4/5}
+.ws-foto .foto img{object-position:50% 25%}
+.ws-testo{flex:999 1 480px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.sottotitolo{font-family:var(--serif);font-style:italic;font-size:23px;line-height:1.25;color:var(--viola3)}
+.obiettivi{display:flex;flex-direction:column;gap:12px}
+.obiettivi div{display:flex;gap:16px;align-items:baseline}
+.obiettivi span{font-family:var(--serif);font-weight:800;font-size:22px}
+.passi{flex:999 1 520px;min-width:0;display:flex;flex-direction:column;gap:16px}
+.passo{display:flex;gap:20px;background:var(--viola2);border-radius:22px;padding:20px 24px;align-items:flex-start}
+.passo .n{font-family:var(--serif);font-weight:800;font-size:28px;line-height:1;min-width:44px}
+.passo p{font-size:16px}
+.ws-lato{flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:20px;align-items:center}
+.tondo{width:100%;max-width:320px;aspect-ratio:1;border-radius:50%;overflow:hidden}
+.tondo img{width:100%;height:100%;object-fit:cover;transform:scale(1.06)}
+.box{border:1.5px solid var(--linea);border-radius:22px;padding:20px 24px;width:100%;max-width:360px}
+
+/* chi sono */
+.chi-foto{flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:16px;align-items:center;max-width:360px}
+.chi-foto .tondo{max-width:340px;border:3px solid var(--bordo)}
+.chi-foto .tondo img{transform:scale(1.03)}
+.numeri{display:flex;gap:14px;width:100%}
+.numeri div{flex:1;background:var(--viola2);border-radius:20px;padding:16px 20px}
+.numeri strong{display:block;font-family:var(--serif);font-weight:800;font-size:36px;line-height:1}
+.numeri p{font-size:14px;margin-top:4px}
+.chi-testo{flex:999 1 500px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.plantmusic{border:1.5px solid #ABC81A;border-radius:22px;padding:20px 26px;display:flex;flex-wrap:wrap;gap:18px 28px;align-items:center;margin-top:8px}
+.plantmusic img{height:64px;width:auto}
+.plantmusic p{flex:1 1 280px;font-size:15.5px}
+
+/* contatti */
+.contatti{background:var(--lime);color:var(--scuro)}
+.contatti .eyebrow{color:var(--viola3)}
+.contatti .row > div:first-child{flex:999 1 520px;min-width:0;display:flex;flex-direction:column;gap:22px}
+.contatti .hero-foto{flex:1 1 300px}
+.contatti .arch{border-color:var(--viola);max-width:360px}
+.recapiti{display:flex;flex-direction:column;gap:6px;font-size:17px}
+footer{padding-block:28px;font-size:14px;color:var(--nota)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+
+@media (max-width: 700px){
+  section{padding-block:72px}
+  .hero .rami{display:none}
+  .sticker{bottom:24px;font-size:14px}
+  .quattro{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<div style="font-family: 'DM Sans', system-ui, sans-serif; color: #F6F0E4; width: 100%; min-height: 100vh; box-sizing: border-box; background-color: #2D1A47">
 
-  <!-- NAV -->
-  <header style="max-width: 1200px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; box-sizing: border-box">
-    <div style="display: flex; align-items: center; gap: 12px">
-      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#C8F53A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V11"></path><path d="M12 11c0-4 3-7 8-7 0 5-3 8-8 8"></path><path d="M12 13c0-3-2.5-6-7-6 0 4 2.5 7 7 7"></path><path d="M18.5 15.5l.6 1.4 1.4.6-1.4.6-.6 1.4-.6-1.4-1.4-.6 1.4-.6z"></path></svg>
-      <span style="font-family: 'Fraunces', Georgia, serif; font-size: 22px; font-weight: 600; letter-spacing: 0.01em">Verde Stellare</span>
-    </div>
-    <nav aria-label="Sezioni" style="display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 15px"><a href="#perche" style="color: rgb(246, 240, 228); text-decoration: none">Perché sceglierlo</a>
-      <a href="#spettacolo" style="color: rgb(246, 240, 228); text-decoration: none">Lo spettacolo</a>
-      <a href="#video" style="color: rgb(246, 240, 228); text-decoration: none">Video</a>
-      <a href="#formati" style="color: rgb(246, 240, 228); text-decoration: none">Formati</a>
-      <a href="#plant-music" style="color: rgb(246, 240, 228); text-decoration: none">Plant Music</a>
-      <a href="#chi" style="color: rgb(246, 240, 228); text-decoration: none">Chi sono</a>
-      <a href="#contatti" style="color: rgb(200, 245, 58); text-decoration: none; font-weight: 700">Contatti</a>
-    </nav>
-  </header>
+<header class="wrap top">
+  <a class="logo" href="#">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C8F53A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V11"/><path d="M12 11c0-4 3-7 8-7 0 5-3 8-8 8"/><path d="M12 13c0-3-2.5-6-7-6 0 4 2.5 7 7 7"/><path d="M18.5 15.5l.6 1.4 1.4.6-1.4.6-.6 1.4-.6-1.4-1.4-.6 1.4-.6z"/></svg>
+    Verde Stellare
+  </a>
+  <nav aria-label="Sezioni">
+    <a href="#spettacolo">Lo spettacolo</a>
+    <a href="#workshop">Il workshop</a>
+    <a href="#chi">Chi sono</a>
+    <a href="#contatti">Contatti</a>
+    <a class="wa" href="https://wa.me/393343639239?text=Ciao%20Argema!%20Vorrei%20organizzare%20un%20evento%20con%20te%20%F0%9F%8C%B1" target="_blank" rel="noopener">WhatsApp</a>
+  </nav>
+</header>
 
-  <!-- HERO -->
-  <section style="max-width: 1200px; margin: 0 auto; padding: 56px 24px 96px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center; box-sizing: border-box">
-    <div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
-      <p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #FF5AA8">Per festival, associazioni ed eventi su natura e sostenibilità</p>
-      <h1 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 800; font-size: clamp(44px, 7vw, 92px); line-height: 0.98; letter-spacing: -0.02em; max-width: 815px">Come e perché la vita delle piante&nbsp;<br><em style="font-style: italic; font-weight: 600; color: rgb(200, 245, 58)">parla anche di te.</em></h1>
-      <p style="margin: 0; font-size: 20px; line-height: 1.55; max-width: 560px; color: #E3D8EE">Lo show comico e interattivo che trasforma il tuo evento in un’esperienza: il pubblico ride, partecipa e se ne va con uno sguardo nuovo sulla natura. E su di sé.</p>
-      <div style="display: flex; flex-wrap: wrap; gap: 14px">
-        <a href="#contatti" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border-radius: 999px; background: #C8F53A; color: #1C0F2B; font-weight: 700; font-size: 16px; text-decoration: none">Porta lo show nel tuo evento</a>
-        <a href="#video" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 999px; border: 2px solid #FF5AA8; color: #FF5AA8; font-weight: 700; font-size: 16px; text-decoration: none">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l13 8-13 8z"></path></svg>
-          Guarda com’è dal vivo
-        </a>
-      </div>
-      <p style="margin: 0; font-size: 15px; color: #B9A9CC">di&nbsp;<strong style="color: rgb(246, 240, 228)">Argema</strong>, agronoma e divulgatrice scientifica e spirituale · @argemacambiovita</p>
-    </div>
-    <div style="flex: 1 1 340px; min-width: 0; display: flex; justify-content: center">
-      <div style="position: relative; width: 100%; max-width: 420px; aspect-ratio: 4 / 5; border-radius: 210px 210px 24px 24px; background: #3E2660; border: 2px solid #8F4BFF; display: flex; align-items: center; justify-content: center; text-align: center; box-sizing: border-box; padding: 0">
-        <img src="argema-nicchia.jpg" alt="Argema sul palco mentre parla al microfono" style="display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 208px 208px 22px 22px">
-        <div style="position: absolute; left: -18px; bottom: 40px; background: #FF5AA8; color: #1C0F2B; font-weight: 700; font-size: 14px; padding: 10px 16px; border-radius: 999px; transform: rotate(-6deg)">30% ridi, 30% impari 40% cresci</div>
+<!-- HERO -->
+<div class="hero">
+  <img class="rami" src="rami-cover.png" alt="" aria-hidden="true">
+  <div class="wrap row">
+    <div class="hero-testo">
+      <p class="eyebrow" style="margin:0">Verde Stellare · Argema</p>
+      <h1>Come e perché la vita delle piante <em>parla anche di te.</em></h1>
+      <p class="muted" style="font-size:20px;max-width:560px">Due proposte per festival, associazioni ed eventi su natura, sostenibilità e benessere.</p>
+      <div class="pills">
+        <a class="btn btn-lime" href="#spettacolo">01 · Lo spettacolo</a>
+        <a class="btn btn-outline" href="#workshop">02 · Il workshop</a>
       </div>
     </div>
-  </section>
-
-  <!-- OSPITE DI -->
-  <section aria-labelledby="ospite-titolo" style="border-top: 1px solid #4C3470; border-bottom: 1px solid #4C3470">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 48px 24px; display: flex; flex-wrap: wrap; gap: 24px 40px; align-items: center; box-sizing: border-box">
-      <h2 id="ospite-titolo" style="flex: 1 1 200px; margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #C8F53A; line-height: 1.6">OSPITE A</h2>
-      <div style="flex: 999 1 640px; min-width: 0; display: flex; flex-wrap: wrap; gap: 16px">
-        <div style="flex: 1 1 150px; height: 110px; display: flex; align-items: center; justify-content: center; padding: 20px 16px; box-sizing: border-box"><img src="nove-cut.png" alt="NOVE" style="max-width: 100%; max-height: 48px; object-fit: contain"></div>
-        <div style="flex: 1 1 150px; height: 110px; display: flex; align-items: center; justify-content: center; padding: 14px 16px; box-sizing: border-box"><img src="buyitnow-cut.png" alt="Buy It Now, mai più senza" style="max-width: 100%; max-height: 80px; object-fit: contain"></div>
-        <div style="flex: 1 1 150px; height: 110px; display: flex; align-items: center; justify-content: center; padding: 16px 16px; box-sizing: border-box"><img src="myplant-cut.png" alt="Myplant &amp; Garden" style="max-width: 100%; max-height: 72px; object-fit: contain"></div>
-        <div style="flex: 1 1 150px; height: 110px; background: #FFFFFF; border-radius: 20px; display: flex; align-items: center; justify-content: center; padding: 16px 24px; box-sizing: border-box"><img src="logo-olistica.png" alt="Olistica &amp; Benessere, la fiera del vivere sano e del sapere olistico" style="max-width: 100%; max-height: 78px; object-fit: contain"></div>
-      </div>
+    <div class="hero-foto">
+      <div class="arch"><img src="argema-nicchia.jpg" alt="Argema sul palco con il microfono"></div>
+      <div class="sticker">Ridi. Impara. Cresci.</div>
     </div>
-  </section>
-
-  <!-- PLANT MUSIC -->
-  <section id="plant-music" style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 0; box-sizing: border-box">
-    <div style="border: 2px solid #ABC81A; border-radius: 28px; padding: 40px; display: flex; flex-wrap: wrap; gap: 32px 48px; align-items: center; box-sizing: border-box">
-      <div style="flex: 1 1 300px; min-width: 0; display: flex; justify-content: center">
-        <img src="logo-plantmusic.png" alt="Plant Music, beats of nature" style="display: block; width: 100%; max-width: 380px; height: auto">
-      </div>
-      <div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
-        <p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #C8F53A">Ambasciatrice ufficiale</p>
-        <h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: clamp(32px, 4vw, 48px); line-height: 1.05; font-weight: 800">Plant Music Ambassador</h2>
-        <p style="margin: 0; font-size: 19px; line-height: 1.65; color: #E3D8EE">Sono ambasciatrice ufficiale di Plant Music, la prima tecnologia nata in Italia per comunicare con le piante attraverso la loro musica.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PERCHE -->
-  <section id="perche" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px 24px; box-sizing: border-box">
-    <p style="margin: 0 0 12px; font-size: 14px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #FF5AA8">Perché sceglierlo</p>
-    <h2 style="margin: 0 0 20px; font-family: 'Fraunces', Georgia, serif; font-size: clamp(34px, 4.5vw, 56px); line-height: 1.05; font-weight: 800; max-width: 820px">Il momento del tuo evento che tutti ricorderanno.</h2>
-    <p style="margin: 0 0 40px; font-size: 19px; line-height: 1.65; max-width: 760px; color: #E3D8EE">Talk e conferenze sulla natura informano. Verde Stellare <strong style="color: #F6F0E4">coinvolge</strong>. Uno spettacolo che non hai mai visto: comicità, divulgazione scientifica e crescita personale, con le storie vere e assurde delle piante trasformate in un’esperienza dal vivo che fa ridere, sorprende e lascia il segno.</p>
-    <div style="display: flex; flex-wrap: wrap; gap: 20px"><div style="flex: 1 1 240px; min-width: 0; background: #3E2660; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 10px; box-sizing: border-box"><h3 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 24px; font-weight: 600; color: #C8F53A">Pubblico coinvolto, non spettatore</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #E3D8EE">Domande, sfide di curiosità e piccoli esperimenti tengono la sala attiva dall’inizio alla fine.</p></div><div style="flex: 1 1 240px; min-width: 0; background: #3E2660; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 10px; box-sizing: border-box"><h3 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 24px; font-weight: 600; color: #FF5AA8">Sostenibilità senza prediche</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #E3D8EE">I temi del tuo evento arrivano attraverso la meraviglia e le risate.</p></div><div style="flex: 1 1 240px; min-width: 0; background: #3E2660; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 10px; box-sizing: border-box"><h3 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 24px; font-weight: 600; color: #B48CFF">Contenuti scientifici veri</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #E3D8EE">Ogni storia si basa su studi reali, raccontati da un’agronoma: intrattenimento con credibilità.</p></div><div style="flex: 1 1 240px; min-width: 0; background: #3E2660; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 10px; box-sizing: border-box"><h3 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 24px; font-weight: 600; color: #C8F53A">Un’esperienza che si racconta</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #E3D8EE">Il pubblico ne parla, la condivide e la ricorda, e il tuo evento guadagna visibilità.</p></div></div>
-  </section>
-
-  <!-- LO SPETTACOLO -->
-  <section id="spettacolo" style="background: #F6F0E4; color: #1C0F2B">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 48px; box-sizing: border-box">
-      <div style="flex: 1 1 320px; min-width: 0">
-        <p style="margin: 0 0 12px; font-size: 14px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #6A2BD9">Lo spettacolo</p>
-        <h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: clamp(34px, 4.5vw, 56px); line-height: 1.05; font-weight: 800">Si ride.&nbsp;<br>Si impara.<br>Si cresce.</h2>
-      </div>
-      <div style="flex: 999 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 20px; font-size: 19px; line-height: 1.65">
-        <p style="margin: 0">Le piante abitano questo pianeta da più di 400 milioni di anni e hanno trovato soluzioni geniali per sopravvivere, adattarsi e cambiare. Argema, agronoma e comica, porta sul palco le loro storie più incredibili e le trasforma in lezioni di vita: come gestire la propria energia, come reinventarsi, come accogliere il cambiamento.</p>
-        <p style="margin: 0">Si ride dei drammi della vita, si scopre il lato nascosto del mondo vegetale e si esce con qualcosa da portare a casa.</p>
-        <p style="margin: 0; font-weight: 700; color: #6A2BD9">Intrattenimento intelligente per eventi che vogliono lasciare il segno.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- LE STORIE -->
-  <section id="storie" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; box-sizing: border-box">
-    <p style="margin: 0 0 12px; font-size: 14px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #FF5AA8">In scaletta</p>
-    <h2 style="margin: 0 0 48px; font-family: 'Fraunces', Georgia, serif; font-size: clamp(34px, 4.5vw, 56px); line-height: 1.05; font-weight: 800">Tre piante, tre esperienze per il tuo pubblico</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 20px">
-      <article style="flex: 1 1 250px; min-width: 0; background: #3E2660; border-radius: 24px; padding: 32px 28px; display: flex; flex-direction: column; gap: 14px; box-sizing: border-box">
-        <span style="font-family: 'Fraunces', Georgia, serif; font-size: 48px; font-weight: 800; color: #C8F53A; line-height: 1">01</span>
-        <h3 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 26px; font-weight: 600">La tua energia vale oro</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #E3D8EE">L’orchidea selvatica investe ogni goccia di energia con astuzia creando stratagemmi evolutivi incredibili. Tu dove stai disperdendo la tua?</p>
-      </article>
-      <article style="flex: 1 1 250px; min-width: 0; background: #3E2660; border-radius: 24px; padding: 32px 28px; display: flex; flex-direction: column; gap: 14px; box-sizing: border-box">
-        <span style="font-family: 'Fraunces', Georgia, serif; font-size: 48px; font-weight: 800; color: #FF5AA8; line-height: 1">02</span>
-        <h3 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 26px; font-weight: 600">Ricordati che sei potentissimo</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #E3D8EE">Le piante carnivore hanno rivoluzionato il proprio corpo per sopravvivere. Anche dentro di te esistono capacità incredibili, solo da riscoprire.&nbsp;</p>
-      </article>
-      <article style="flex: 1 1 250px; min-width: 0; background: #3E2660; border-radius: 24px; padding: 32px 28px; display: flex; flex-direction: column; gap: 14px; box-sizing: border-box">
-        <span style="font-family: 'Fraunces', Georgia, serif; font-size: 48px; font-weight: 800; color: #B48CFF; line-height: 1">03</span>
-        <h3 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 26px; font-weight: 600">Finché cambi, sei vivo</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #E3D8EE">Le piante continuano a crescere e a trasformarsi per tutta la vita. Il cambiamento non è un’eccezione: è la regola della vita.</p>
-      </article>
-      
-    </div>
-  </section>
-
-  <!-- VIDEO -->
-  <section id="video" style="max-width: 1200px; margin: 0 auto; padding: 0 24px 96px; box-sizing: border-box">
-    <div style="width: 100%; aspect-ratio: 16 / 9; border-radius: 24px; border: 2px solid #8F4BFF; background: #000000; overflow: hidden; box-sizing: border-box">
-      <video src="video-vs.mp4" poster="poster-vs.jpg" controls="" playsinline="" preload="metadata" aria-label="Video dimostrativo di Verde Stellare" style="display: block; width: 100%; height: 100%; object-fit: contain"></video>
-    </div>
-  </section>
-
-  <!-- CHI SONO -->
-  <section id="chi" style="background: #6A2BD9">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; box-sizing: border-box">
-      <div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
-        <p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #C8F53A">Chi sono</p>
-        <h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: clamp(34px, 4.5vw, 56px); line-height: 1.05; font-weight: 800">Ho cambiato vita. Le piante lo fanno ogni giorno.</h2>
-        <p style="margin: 0; font-size: 19px; line-height: 1.65">Mi chiamo Argema, ho 29 anni e sono agronoma. Quattro anni fa ho stravolto la mia vita per cercare un senso più grande andando a vivere in una Comunità Spirituale in Piemonte. Le piante sono diventate il mio modo di raccontarlo.</p>
-        <p style="margin: 0; font-size: 19px; line-height: 1.65">Su Instagram faccio divulgazione scientifica sul mondo vegetale: studi veri, ironia e lezioni di crescita personale. Ora porto tutto questo sul palco.</p>
-      </div>
-      <div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
-        <div style="background: #2D1A47; border-radius: 20px; padding: 24px 28px">
-          <div style="font-family: 'Fraunces', Georgia, serif; font-size: 40px; font-weight: 800; color: #C8F53A">11.000</div>
-          <div style="font-size: 15px; color: #E3D8EE">follower su Instagram</div>
-        </div>
-        
-        <div style="background: #2D1A47; border-radius: 20px; padding: 24px 28px">
-          <div style="font-family: 'Fraunces', Georgia, serif; font-size: 40px; font-weight: 800; color: #B48CFF">15</div>
-          <div style="font-size: 15px; color: #E3D8EE">esibizioni dal vivo</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FORMATI -->
-  <section id="formati" style="max-width: 1200px; margin: 0 auto; padding: 0 24px 24px; box-sizing: border-box">
-    <p style="margin: 0 0 12px; font-size: 14px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #FF5AA8">Formati</p>
-    <h2 style="margin: 0 0 40px; font-family: 'Fraunces', Georgia, serif; font-size: clamp(34px, 4.5vw, 56px); line-height: 1.05; font-weight: 800">Lo show si adatta al tuo evento</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 20px"><div style="flex: 1 1 260px; min-width: 0; border: 2px solid #5A4378; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 8px; box-sizing: border-box"><span style="font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #C8F53A">45 minuti</span><h3 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 26px; font-weight: 600">Lo show completo</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #E3D8EE">L’esperienza intera, per serate, rassegne, teatri e convegni.</p></div><div style="flex: 1 1 260px; min-width: 0; border: 2px solid #5A4378; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 8px; box-sizing: border-box"><span style="font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #C8F53A">15-20 minuti</span><h3 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 26px; font-weight: 600">Il format breve</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #E3D8EE">Perfetto dentro festival, fiere e programmi con più ospiti.</p></div><div style="flex: 1 1 260px; min-width: 0; border: 2px solid #5A4378; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 8px; box-sizing: border-box"><span style="font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #C8F53A">Il tuo tema</span><h3 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 26px; font-weight: 600">Su misura</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #E3D8EE">Adatto contenuti e piante ai temi del tuo evento: sostenibilità, benessere, biodiversità, comunità.</p></div></div>
-  </section>
-
-  <!-- SCHEDA TECNICA -->
-  <section id="scheda" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; box-sizing: border-box">
-    <p style="margin: 0 0 12px; font-size: 14px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #C8F53A">Per organizzatori</p>
-    <h2 style="margin: 0 0 40px; font-family: 'Fraunces', Georgia, serif; font-size: clamp(34px, 4.5vw, 56px); line-height: 1.05; font-weight: 800">Scheda tecnica</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 0 48px">
-      <dl style="flex: 1 1 400px; min-width: 0; margin: 0">
-        <div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 20px 0; border-top: 1px solid #5A4378">
-          <dt style="flex: 0 0 160px; color: #B9A9CC; font-size: 15px">Durata</dt>
-          <dd style="flex: 1 1 200px; margin: 0; font-size: 17px">un pezzo da 15-20 minuti per rassegne e festival o 45 minuti per convegni</dd>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 20px 0; border-top: 1px solid #5A4378">
-          <dt style="flex: 0 0 160px; color: #B9A9CC; font-size: 15px">Pubblico</dt>
-          <dd style="flex: 1 1 200px; margin: 0; font-size: 17px">Adulti e ragazzi dai 14 anni in su</dd>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 20px 0; border-top: 1px solid #5A4378">
-          <dt style="flex: 0 0 160px; color: #B9A9CC; font-size: 15px">Spazi</dt>
-          <dd style="flex: 1 1 200px; margin: 0; font-size: 17px">Teatri, spazi all'aperto, orti botanici, parchi, ecomusei, festival</dd>
-        </div>
-      </dl>
-      <dl style="flex: 1 1 400px; min-width: 0; margin: 0">
-        <div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 20px 0; border-top: 1px solid #5A4378">
-          <dt style="flex: 0 0 160px; color: #B9A9CC; font-size: 15px">Necessità</dt>
-          <dd style="flex: 1 1 200px; margin: 0; font-size: 17px">Un microfono [e un proiettore per le immagini, se disponibile non obbligatorio]</dd>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 20px 0; border-top: 1px solid #5A4378">
-          <dt style="flex: 0 0 160px; color: #B9A9CC; font-size: 15px">Preparazione</dt>
-          <dd style="flex: 1 1 200px; margin: 0; font-size: 17px">20-30 minuti prima dell'inizio dello spettacolo</dd>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 20px 0; border-top: 1px solid #5A4378">
-          <dt style="flex: 0 0 160px; color: #B9A9CC; font-size: 15px">Zona</dt>
-          <dd style="flex: 1 1 200px; margin: 0; font-size: 17px">Piemonte, Emilia Romagna e Nord-Italia</dd>
-        </div>
-      </dl>
-    </div>
-  </section>
-
-  <!-- CONTATTI -->
-  <section id="contatti" style="background: #C8F53A; color: #1C0F2B">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center; box-sizing: border-box">
-      <div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
-        <h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: clamp(38px, 5.5vw, 72px); line-height: 1; font-weight: 800">Vuoi un evento di cui tutti parleranno?</h2>
-        <p style="margin: 0; font-size: 19px; line-height: 1.6; max-width: 560px">Organizzi un festival, una rassegna o un evento su natura, sostenibilità o benessere? Scrivimi: costruiamo insieme lo show giusto per il tuo pubblico.</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 14px"><a href="https://wa.me/393343639239?text=Ciao%20Argema!%20Vorrei%20organizzare%20uno%20spettacolo%20con%20te%20%F0%9F%8C%B1" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0px 28px; border-radius: 999px; background: #6A2BD9; color: #FFFFFF; font-weight: 700; font-size: 16px; text-decoration: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.1-5.2A8.5 8.5 0 1 1 21 11.5z"></path></svg>Scrivimi su WhatsApp</a>
-          <a href="mailto:argema@damanhur.org" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0px 28px; border-radius: 999px; background: #2D1A47; color: rgb(200, 245, 58); font-weight: 700; font-size: 16px; text-decoration: none">argema@damanhur.org</a>
-          <a href="https://instagram.com/argemacambiovita" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0px 26px; border-radius: 999px; border: 2px solid rgb(28, 15, 43); color: rgb(28, 15, 43); font-weight: 700; font-size: 16px; text-decoration: none">@argemacambiovita</a>
-        </div>
-        <p style="margin: 0; font-size: 16px">Telefono: +39 3343639239</p>
-      </div>
-      <div style="flex: 1 1 320px; min-width: 0; background: #2D1A47; color: #F6F0E4; border-radius: 28px; padding: 36px 32px; display: flex; flex-direction: column; gap: 16px; box-sizing: border-box">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF5AA8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h11l-1.5 9h-8z"></path><path d="M15 12l4-3"></path><path d="M19 9l1.5-1.5"></path><path d="M9 10V7c0-2 1.5-3 3-3"></path></svg>
-        <h3 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 28px; font-weight: 600">Annaffia il sogno</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #E3D8EE">Il mio sogno è portare Verde Stellare in giro per teatri e piazze. Se vuoi aiutarlo a crescere, anche un piccolo gesto conta: chiedilo a qualsiasi seme.</p>
-        <a href="https://ko-fi.com/argema" style="display: inline-flex; align-self: flex-start; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #FF5AA8; color: #1C0F2B; font-weight: 700; font-size: 16px; text-decoration: none">Sostienimi su Ko-fi</a>
-      </div>
-    </div>
-  </section>
-
-  <footer style="max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; font-size: 14px; color: #B9A9CC; box-sizing: border-box">
-    <span>Verde Stellare · Argema, agronoma e divulgatrice</span>
-    <span>Scienza, anima e risate, una pianta alla volta</span>
-  </footer>
+  </div>
 </div>
+
+<!-- OSPITE A -->
+<div class="ospite">
+  <div class="wrap">
+    <p class="eyebrow" style="margin:0;color:var(--lime)">Ospite a</p>
+    <div class="loghi">
+      <img src="nove-cut.png" alt="NOVE" style="height:34px">
+      <img src="buyitnow-cut.png" alt="Buy It Now" style="height:56px">
+      <img src="myplant-cut.png" alt="Myplant &amp; Garden" style="height:52px">
+      <span style="background:#fff;border-radius:12px;padding:7px 12px;display:inline-flex"><img src="logo-olistica.png" alt="Olistica &amp; Benessere" style="height:44px"></span>
+    </div>
+  </div>
+</div>
+
+<!-- SPETTACOLO -->
+<section id="spettacolo" class="chiaro">
+  <div class="wrap row" style="align-items:stretch">
+    <div class="col-testo">
+      <p class="eyebrow">Proposta 01 · Lo spettacolo</p>
+      <h2>Non un monologo. <em>Un’esperienza.</em></h2>
+      <p class="muted">Lo show comico e interattivo che trasforma il tuo evento: il pubblico ride, partecipa e se ne va con uno sguardo nuovo sulla natura. E su di sé.</p>
+      <p class="muted">Le piante abitano questo pianeta da più di 400 milioni di anni e hanno trovato soluzioni geniali per sopravvivere, adattarsi e cambiare. Sul palco le loro storie più incredibili, tutte vere e basate su studi scientifici, diventano lezioni di vita.</p>
+      <div class="quattro">
+        <div><h3 style="color:var(--viola3)">Ridi.</h3><p>Storie vere così assurde che sembrano inventate.</p></div>
+        <div><h3 style="color:var(--fucsia-scuro)">Partecipa.</h3><p>Domande e sfide di curiosità coinvolgono la sala.</p></div>
+        <div><h3 style="color:var(--viola3)">Scopri.</h3><p>Ogni curiosità nasce da studi scientifici veri.</p></div>
+        <div><h3 style="color:var(--fucsia-scuro)">Cambia sguardo.</h3><p>Ogni pianta lascia una lezione da portare a casa.</p></div>
+      </div>
+    </div>
+    <div class="col-foto">
+      <div class="foto alta"><img src="stage14.jpg" alt="Argema sul palco"></div>
+      <div class="foto"><img src="stage19.jpg" alt="Argema racconta la mimosa che impara"></div>
+      <div class="foto"><img src="stage33.jpg" alt="Argema durante lo spettacolo"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STORIE E FORMATI -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Proposta 01 · Lo spettacolo</p>
+    <h2>Alcune storie che porto <em>sul palco</em></h2>
+    <div class="storie">
+      <article class="storia"><img src="storia-impara.jpg" alt=""><h3>Le piante imparano e ricordano</h3></article>
+      <article class="storia"><img src="storia-eclissi.jpg" alt=""><h3>Gli alberi prevedono le eclissi</h3></article>
+      <article class="storia"><img src="storia-pensano.jpg" alt=""><h3>Se le pensano tutte</h3></article>
+      <article class="storia"><img src="storia-dattero.jpg" alt=""><h3>Il seme che ha sfidato il tempo</h3></article>
+      <article class="storia"><img src="storia-natura.jpg" alt=""><h3>Il tuo cervello vede se stesso in natura</h3></article>
+    </div>
+    <div class="formati">
+      <div class="formato"><p class="eyebrow">45 minuti</p><h3>Lo show completo</h3><p class="muted">L’esperienza intera, per serate, rassegne, teatri e convegni.</p></div>
+      <div class="formato"><p class="eyebrow">15-20 minuti</p><h3>Il format breve</h3><p class="muted">Perfetto dentro festival, fiere e programmi con più ospiti.</p></div>
+      <div class="formato"><p class="eyebrow">Su misura</p><h3>Sul tema del tuo evento</h3><p class="muted">Sostenibilità, benessere, biodiversità, comunità.</p></div>
+      <div class="formato scheda"><p class="eyebrow">Scheda tecnica</p><p>Serve solo un microfono (proiettore se disponibile). Teatri, palchi all’aperto, orti botanici, fiere, sale conferenze. Montaggio 20-30 minuti.</p></div>
+    </div>
+    <div class="video">
+      <video src="video-vs.mp4" poster="poster-vs.jpg" controls playsinline preload="metadata" aria-label="Video dimostrativo dello spettacolo"></video>
+    </div>
+  </div>
+</section>
+
+<!-- WORKSHOP -->
+<section id="workshop" class="chiaro">
+  <div class="wrap row" style="align-items:flex-start">
+    <div class="ws-foto"><div class="foto"><img src="stage35.jpg" alt="Argema durante un incontro sulle piante"></div></div>
+    <div class="ws-testo">
+      <p class="eyebrow">Proposta 02 · Il workshop</p>
+      <h2>Il linguaggio verde</h2>
+      <p class="sottotitolo">Workshop di comunicazione con il mondo vegetale</p>
+      <p class="muted">Un’ora dinamica, in movimento e all’aperto, per entrare in connessione con le piante: capire come comunicano, come possiamo ascoltarle e cosa possono insegnarci esseri che vivono con logiche completamente diverse dalle nostre.</p>
+      <div class="obiettivi">
+        <div><span style="color:var(--fucsia-scuro)">01</span><p><strong>Imparare a comunicare con le piante</strong>, con attenzione, sensi e presenza.</p></div>
+        <div><span style="color:var(--viola3)">02</span><p><strong>Scoprire come loro comunicano con noi</strong> e come possiamo imparare da loro.</p></div>
+        <div><span style="color:var(--fucsia-scuro)">03</span><p><strong>Ricevere lezioni di vita per il presente</strong> da esseri con logiche diverse dalle nostre.</p></div>
+        <div><span style="color:var(--viola3)">04</span><p><strong>Vivere un’esperienza in movimento all’aperto</strong>, in connessione diretta con le piante.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UN'ORA TRA LE PIANTE -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Proposta 02 · Il workshop</p>
+    <h2 style="margin-bottom:32px">Un’ora <em>tra le piante</em></h2>
+    <div class="row" style="align-items:flex-start">
+      <div class="passi">
+        <div class="passo"><span class="n" style="color:var(--lime)">1</span><p><strong>Rallentare e prepararsi.</strong> <span class="muted">Si entra nel tempo delle piante: respiro, sensi, attenzione.</span></p></div>
+        <div class="passo"><span class="n" style="color:var(--fucsia)">2</span><p><strong>Come si comunica con le piante e come loro comunicano con noi.</strong> <span class="muted">Esercizi di comunicazione attraverso esperienze sensoriali guidate, in movimento tra le piante.</span></p></div>
+        <div class="passo"><span class="n" style="color:var(--lime)">3</span><p><strong>Lezioni per il presente.</strong> <span class="muted">Cosa portiamo a casa da esseri con logiche diverse dalle nostre. Condivisione finale.</span></p></div>
+      </div>
+      <div class="ws-lato">
+        <div class="tondo"><img src="pollice.jpg" alt="Argema con la parrucca verde e i pollici in su"></div>
+        <div class="box">
+          <p class="eyebrow" style="color:var(--lime);font-size:13px">Scheda del workshop</p>
+          <p style="font-size:15px;line-height:1.7"><strong>Durata:</strong> 1 ora<br><strong>Dove:</strong> all’aperto, parchi, giardini, orti botanici<br><strong>Formato:</strong> dinamico, in movimento<br><strong>Partecipanti:</strong> numero da concordare</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHI SONO -->
+<section id="chi" style="background:#25143D">
+  <div class="wrap row" style="align-items:flex-start">
+    <div class="chi-foto">
+      <div class="tondo"><img src="chi-sono.jpg" alt="Ritratto di Argema con la parrucca verde su sfondo viola"></div>
+      <div class="numeri">
+        <div><strong style="color:var(--lime)">11.000</strong><p class="muted">follower su Instagram</p></div>
+        <div><strong style="color:var(--fucsia)">15</strong><p class="muted">ospitate tra TV e fiere</p></div>
+      </div>
+    </div>
+    <div class="chi-testo">
+      <p class="eyebrow">Chi sono</p>
+      <h2>Ho cambiato vita. <em>Le piante lo fanno ogni giorno.</em></h2>
+      <p class="muted">Mi chiamo Argema, ho 29 anni e sono agronoma. Quattro anni fa ho stravolto la mia vita per cercare un senso più grande, andando a vivere in una comunità spirituale. Le piante mi hanno sostenuta e aiutata in questo cambiamento, diventando il mio modo di raccontare storie di crescita ed evoluzione interiore.</p>
+      <p class="muted">Faccio divulgazione scientifica sul mondo vegetale unendo studi scientifici, comicità e crescita personale: sui social come <strong style="color:var(--crema)">@argemacambiovita</strong>, dal vivo sul palco e nei workshop.</p>
+      <p class="eyebrow" style="color:var(--lime);margin:6px 0 0">Ospite a</p>
+      <div class="loghi">
+        <img src="nove-cut.png" alt="NOVE" style="height:30px">
+        <img src="buyitnow-cut.png" alt="Buy It Now" style="height:50px">
+        <img src="myplant-cut.png" alt="Myplant &amp; Garden" style="height:46px">
+        <span style="background:#fff;border-radius:12px;padding:6px 11px;display:inline-flex"><img src="logo-olistica.png" alt="Olistica &amp; Benessere" style="height:38px"></span>
+      </div>
+      <div class="plantmusic">
+        <img src="logo-plantmusic.png" alt="Plant Music, beats of nature">
+        <p class="muted"><strong style="color:var(--lime)">Plant Music Ambassador.</strong> Ambasciatrice ufficiale di Plant Music, la prima tecnologia nata in Italia per comunicare con le piante attraverso la loro musica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATTI -->
+<section id="contatti" class="contatti">
+  <div class="wrap row">
+    <div>
+      <p class="eyebrow" style="margin:0">Per il tuo evento</p>
+      <h2 style="font-size:clamp(36px,5.4vw,64px)">Spettacolo, workshop <span style="font-style:italic;font-weight:600;color:var(--viola3)">o entrambi.</span></h2>
+      <p style="max-width:580px">Le due proposte si possono abbinare nella stessa giornata: il workshop per vivere la connessione con le piante, lo spettacolo per ridere e scoprire insieme. Costruiamo il formato giusto per il tuo pubblico.</p>
+      <div class="pills">
+        <a class="btn btn-viola" href="https://wa.me/393343639239?text=Ciao%20Argema!%20Vorrei%20organizzare%20un%20evento%20con%20te%20%F0%9F%8C%B1" target="_blank" rel="noopener">Scrivimi su WhatsApp</a>
+        <a class="btn btn-dark" href="mailto:argema@damanhur.org">argema@damanhur.org</a>
+        <a class="btn btn-dark-outline" href="https://instagram.com/argemacambiovita" target="_blank" rel="noopener">@argemacambiovita</a>
+      </div>
+      <p style="font-size:15px">Vuoi sostenere il progetto? <a href="https://ko-fi.com/argema" target="_blank" rel="noopener" style="color:var(--viola3);font-weight:700">Annaffia il sogno su Ko-fi</a></p>
+    </div>
+    <div class="hero-foto">
+      <div class="arch"><img src="argema-nicchia.jpg" alt="Argema sul palco con il microfono"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><span>Verde Stellare · Argema, agronoma e divulgatrice</span><span>Scienza, anima e risate, una pianta alla volta</span></div>
+</footer>
+
 </body>
 </html>
